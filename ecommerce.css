@@ -15,14 +15,15 @@
 
 body{
     font-family: 'Merienda', cursive;
-   margin: 0px;
-   padding: 0px;
-   list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
     text-transform: capitalize;
     text-decoration: none;
     text-align: center;
     outline: 0px;
     transition: all 3s linear;
+    width: 100%;
 
 }
 header h4, nav, header nav ul li{
@@ -31,18 +32,36 @@ header h4, nav, header nav ul li{
 header{
     background-image: radial-gradient(white, crimson); ;
     position: relative;
-    min-height: 100vh;
+    min-height: 100vw;
+    margin-top: 0%;
+    padding:10% ;
+    margin-left: 0%;
+    padding-left: 2%;
+    padding-bottom: 0%;
+
+ 
+ 
+
 }
 nav{
     position: absolute;
     top: 5%;
     right: 5%;
-    width: 500px;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 .headerp{
     display: flex;
-    position: absolute;
-    top: 26%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:20% 0% 20% 0%;
+
+ 
+
+
 
 }
 header h4{
@@ -54,10 +73,10 @@ header h4{
     font-weight:bold ;
 }
 .header2{
-width: 28rem;
-height: 28rem;
+width:600px;
+height:628px;
 margin-left: auto;
-margin-right: 16%;
+margin-right: 6%;
 }
 .header2 img{
     width: 100%;
@@ -73,8 +92,8 @@ nav a:hover{
     color: #ffff;
 }
 nav ul li{
-    margin-right: 2%;
-    margin-left: 2%;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 .header1{
     width: 45%;
@@ -105,8 +124,10 @@ nav ul li{
     width: 150px;
     height: 150px;
     position: absolute;
-    left: 35%;
-    top: -75px;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%,-50%);
+    margin-bottom: 40px;
     
 
 } 
@@ -117,25 +138,67 @@ nav ul li{
     height: 100%;
 
 }
-.john-wich, .steve-harvey, .natale-sallaum{
+.jwa::before{
+    content: url(./images/quotes.png );
+    position:absolute;
+    top: -208px;
+    right: -198px;
+    opacity: 0.35;
+    z-index: 1000;
+    transform: scale(0.11);
+    margin: 2%;
+    transition: all 0.3s linear;
+}
+.jwa::after
+{
+    content: url(./images/quotes.png );
+    position:absolute;
+    bottom: -208px;
+    right: 132px;
+    opacity: 0.35;
+    z-index: 1000;
+    transform: rotate(180deg) scale(0.11);
+    margin: 2%;
+    transition: all 0.3s linear;
+
+}
+.jwa:hover::before , .jwa:hover::after 
+{
+opacity: 1;
+transform: scale(0.11)  translatey(-100%) ;
+}
+ .jwa:hover::after {
+    opacity: 1;
+    transform: rotate(180deg) scale(0.11)  translatey(-100%) ;
+ }
+
+.jwa{
     background-color: #EEEEEE;
     position: relative;
-    margin: 2%;
+    margin: 80px;
     padding: 3%;
     padding-top: 6%;
-
+    max-width:460px;
+    min-height:370px;
 }
  .testimonials{
 display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
 }
 .john-wich p, .steve-harvey p, .natale-sallaum p{
     text-align: left;
     cursor: default;
+    margin-top: 2% ;
+    line-height: 1.8;
 }
 .john-wich h2, .steve-harvey h2, .natale-sallaum h2{
     color: #DC143C;
     cursor: default;
     text-transform: uppercase;
+    margin: 2%;
+    line-height: 1.8;
 }
 
 
@@ -146,18 +209,22 @@ display: flex;
     background-color: #DF3A5B;
     color: white;
 }
+.john-wich:hover h2, .natale-sallaum:hover h2, .steve-harvey:hover h2{
+   
+    color: white;
+} 
 .logo{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin: 5%;
-    margin-left: 7%;
+    justify-content: center;
+    margin: 0%;
+    padding: 0%;
+
 }
 .br1, .br2, .br3, .br4, .br5{
     filter: opacity(0.3);
-    margin-left: 6%;
-    margin-right: 6%;
-    margin-top: 2%;
-    margin-bottom: 1%;
+    margin: 80px;
     cursor: pointer;
 }
 .br1:hover, .br2:hover, .br3:hover, .br4:hover, .br5:hover{
@@ -180,10 +247,15 @@ display: flex;
 .apple-watch{
     background-image: radial-gradient(white,crimson);
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 .apple-img{
-    width: 40rem;
-    margin: 5%;
+    width: 38rem;
+    margin: 30px;
+    margin-top: 6%;
+    
 
 }
 .apple-img img{
@@ -191,11 +263,12 @@ display: flex;
     height: 100%;
 }
 .apple-watch1{
-    width: 60%;
-    margin: 3%;
+    width: 50%;
+    margin: 30px;
     line-height: 2.5rem;
     font-size: 150%;
     text-align: left;
+    margin-top: 6%;
     
 }
 .apple-watch1 h1, .apple-watch1 p, .apple-watch1 a, .apple-watch1 h2{
@@ -204,6 +277,7 @@ display: flex;
 }
 .apple-watch1 h1{
     font-size: 220%;
+    line-height: 2;
 
 }
 .apple-watch1 a{
@@ -232,18 +306,76 @@ background-color: #AD0224;
 .products, .latest-products{
     display: flex;
     flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+    
+
     
 }
 .pjamas, .rolex, .trousers, .t-shirt, .purse, .perfume, .blouse, .nikes-shoes, .rolex-watch2, .shirt, .trousers2, .dress{
-    margin: 5%;
+    margin: 2%;
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.8;
+    height:389px;
+    width:350px;
+    margin-bottom: 7%;
+
+}
+.char a{
+    background-color:#DC143C ;
+    width: fit-content;
+    padding: 8px;
+    color: white;
+}
+.products img , .latest-products img{
+   
+    width:100%;
+    height:100%;
+
+}    
+
+.imgpro
+{
+    position: relative;
+    top:0%;
+    left:0%;
+
+}
+.char{
+    position: absolute;
+    top: 0%;
+    left:0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.3);
+    transform:scale(0);
+    transition: all 0.3s linear;
+    transform-origin: 0% 50%;
+    
+
+}
+.imgpro:hover .char{
+    transform:scale(1) translate(0%) ;
+}
+.char i{
+    color: white;
+
+}
+.left{
+    position: absolute;
+    left: 0%;
+    margin-top: 4px;
 }
 
 footer{
     background-color: #000000;
     color: white;
-    padding: 3%;
+    padding: 40px;
+   
 }
 footer a{
     color: white;
@@ -279,29 +411,32 @@ footer i{
 }
 .div1{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    --mar:3%
 }
 .about-us ul li{
     display: inline-block;
 }
 .about-us{
-    width: 80%;
+    width: 400px;
     text-align: left;
-    margin-left: 0%;
+    margin: var(--mar);
+    
 }
 .about-us ul, .about-us p, .about-us h1{
     text-align: left;
     margin: 4%;
     line-height: 1.8rem;
-    margin-left: 0%;
+    margin-left: 2%;
 }
 .about-us ul li{
     margin-right: 2%;
 }
 
 .main-menu{
-    margin-left: 4%;
-    margin-right: 22%;
-    width: 50%;
+    margin: var(--mar);
+    width: 300px;
     text-align: left;
 }
 .main-menu ul {
@@ -321,9 +456,8 @@ footer i{
 
 }
 .quick-links{
-    margin-left: 3%;
-    margin-right: 8%;
-    width: 60%;
+    margin: var(--mar);
+    width: 300px;
     text-align: left;
 }
 .quick-links ul {
@@ -342,8 +476,9 @@ footer i{
 
 }
 .contact-us{
-    margin-top: 3%;
+    margin: var(--mar);
     text-align: left;
+    width: 300px;
 }
 .contact-us ul {
     line-height: 2rem;
@@ -365,4 +500,101 @@ footer i{
     margin:2%;
     font-size: 130%;
     margin-bottom: 0%;
+
 }
+
+.total-products span{
+    display: none;
+}
+
+ nav i.far {
+     display: none;
+     margin: 10px;
+ }
+header .fas{
+    display: none;
+    margin: 10px;
+ }
+
+ @media (max-width:700px){
+     h1.h11{
+         font-size: 40px;
+         border-bottom: 6px solid #DC143C;
+         font-weight: bold;
+         margin: 8%;
+         display: inline-block;
+   
+     }
+     nav{
+        position: absolute;
+        height: 100%;
+        z-index: 10000;
+        background-color: yellow;
+        width: 120px;
+        right: -120px;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-content:flex-start ;
+        justify-content: flex-start;
+    }
+   
+    nav ul li{
+        display: block;
+        margin: 10px 0px;
+        
+    }
+     nav i.far{
+        display: block;
+    }
+    header i.fas{
+        display:block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+ }
+
+ 
+ @media (max-width:1080px){
+    .jwa p{
+        margin-top: 80px;
+    }
+    nav{
+        position: absolute;
+        height: 100%;
+        z-index: 10000;
+        background-color: yellow;
+        width: 120px;
+        right: -120px;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-content:flex-start ;
+        justify-content: flex-start;
+    }
+   
+    nav ul li{
+        display: block;
+        margin: 10px 0px;
+        
+    }
+     nav i.far{
+        display: block;
+    }
+    header i.fas{
+        display:block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+@media (max-width:400px){
+
+    .pjamas, .rolex, .trousers, .t-shirt, .purse, .perfume, .blouse, .nikes-shoes, .rolex-watch2, .shirt, .trousers2, .dress{
+
+        margin-bottom: 52px;
+    }    
+}
+
